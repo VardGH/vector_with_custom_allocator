@@ -4,7 +4,8 @@
 #include "vector.hpp"
 
 template <typename T>
-void merge(typename Vector<T>::Iterator left, typename Vector<T>::Iterator mid, typename Vector<T>::Iterator right) {
+void merge(typename Vector<T>::Iterator left, typename Vector<T>::Iterator mid, typename Vector<T>::Iterator right)
+{
     Vector<T> temp;
 
     auto start1 = left;
@@ -37,7 +38,8 @@ void merge(typename Vector<T>::Iterator left, typename Vector<T>::Iterator mid, 
 }
 
 template <typename T>
-void merge_sort(typename Vector<T>::Iterator left, typename Vector<T>::Iterator right) {
+void merge_sort(typename Vector<T>::Iterator left, typename Vector<T>::Iterator right)
+{
     if (left < right) {
         auto mid = left + (right - left) / 2;
 
