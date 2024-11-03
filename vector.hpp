@@ -5,7 +5,8 @@
 #include <initializer_list>
 
 template <typename T, typename Allocator = allocator<T>>
-class Vector {
+class Vector
+{
 public:
 
     // Cotors
@@ -79,6 +80,11 @@ public:
         {
             m_ptr -= offset;
             return *this;
+        }
+
+        std::ptrdiff_t operator-(const Iterator& other) const 
+        {
+            return m_ptr - other.m_ptr;
         }
 
         // Comparison operators
